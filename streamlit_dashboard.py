@@ -117,7 +117,7 @@ with dwn2:
     st.download_button("Get Data", data=season_counts.to_csv().encode("utf-8"),
                        file_name="SeasonCounts.csv", mime="text/csv")
 
-st.divider()
+
 
 
 subcategory_sales = filtered_data.groupby('subCategory').size().reset_index(name='Total Sales')
@@ -151,7 +151,7 @@ with dwn3:
                        file_name="SubCategorySales.csv", mime="text/csv")
 
 
-st.divider()
+
 sales_data = filtered_data.groupby(['gender', 'masterCategory',  'usage', 'subCategory','baseColour']).size().reset_index(name='Total Sales')
 
 
